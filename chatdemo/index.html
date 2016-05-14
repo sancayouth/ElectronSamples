@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Electron Chat Demo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">    
+</head>
+<body>
+   <div class="chat_window">
+      <header class="chat_header">
+        <div class="info_header">
+          <span class="name">John Doe</span>
+          <i class="close fa fa-close fa-lg" id="close"></i>
+          <i class="minus fa fa-minus fa-lg" id="min"></i>
+        </div>
+      </header>
+      <main class="chat_body">
+        <div class="messages">
+          <div class="msg">
+            <span class="me"> Hola, como andas?</span>
+          </div>
+          <div class="msg">
+            <span class="you">Hola,bien, vos?</span>
+          </div>
+          <div class="msg">
+            <span class="me"> todo bien, gracias por preguntar</span>
+          </div>
+          <div class="msg">
+            <span class="you">:)</span>
+          </div>
+        </div>
+      </main>
+      <footer class="chat_footer">
+        <div class="send">
+          <i class="attach fa fa-paperclip fa-lg"></i>
+          <form class="form" action="">
+            <input class="input_chat" type="text">
+            <button class="btn" type="button" name="button">Send</button>
+            <div class="vertical_line"></div>
+          </form>
+        </div>
+      </footer>
+    </div>    
+</body>
+<script>    
+    require('./frameless.js')
+  </script>
+</html>
