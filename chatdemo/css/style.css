@@ -3,11 +3,11 @@ body { background-color: rgba(0, 0, 0, 0.95); margin: 0; padding: 0; font-family
 *:focus { outline: none; }
 
 .chat_window { height: 300px; width: 400px; margin: 0; padding: 0; border-radius: 10px; }
-.chat_window .chat_header { height: 50px; background-color: #827dcf; color: #FFF; border-top-left-radius: 10px; border-top-right-radius: 10px; }
+.chat_window .chat_header { -webkit-app-region: drag; height: 50px; background-color: #827dcf; color: #FFF; border-top-left-radius: 10px; border-top-right-radius: 10px; }
 .chat_window .chat_header .info_header { padding: 16px 0 0 20px; }
 .chat_window .chat_header .info_header .name { font-size: 1.25em; font-weight: 600; }
-.chat_window .chat_header .info_header .close { float: right; padding: 3px 16px 0 0; }
-.chat_window .chat_header .info_header .minus { float: right; padding: 8px 8px 0 0; }
+.chat_window .chat_header .info_header .close { -webkit-app-region: no-drag; float: right; padding: 3px 16px 0 0; }
+.chat_window .chat_header .info_header .minus { -webkit-app-region: no-drag; float: right; padding: 8px 8px 0 0; }
 .chat_window .chat_body { height: 200px; background-color: #FFF; overflow: auto; }
 .chat_window .chat_body .messages .msg { width: 100%; font-size: 1em; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .chat_window .chat_body .messages .msg .you { float: left; position: relative; padding: 0.7em 0.9em; margin: 4px 20px; background-color: #827cd6; color: #FFF; border-radius: 8px; }

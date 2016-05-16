@@ -30,6 +30,7 @@ body{
   border-radius: $radius;
 
   .chat_header{
+    -webkit-app-region: drag;
     height: 50px;
     background-color: $header_bg;
     color:#FFF;
@@ -44,10 +45,12 @@ body{
         font-weight: 600;
       }
       .close{
+        -webkit-app-region: no-drag;
         float: right;
         padding: 3px 16px 0 0;
       }
       .minus{
+        -webkit-app-region: no-drag;
         float: right;
         padding: 8px 8px 0 0;
       }
