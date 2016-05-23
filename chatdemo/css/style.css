@@ -6,6 +6,7 @@ body { background-color: rgba(0, 0, 0, 0.5); margin: 0; padding: 0; font-family:
 .chat_window .chat_header { -webkit-app-region: drag; height: 50px; background-color: #827dcf; color: #FFF; border-top-left-radius: 10px; border-top-right-radius: 10px; }
 .chat_window .chat_header .info_header { padding: 16px 0 0 20px; }
 .chat_window .chat_header .info_header .name { font-size: 1.25em; font-weight: 600; }
+.chat_window .chat_header .info_header .cog { -webkit-app-region: no-drag; float: right; padding: 3px 7px 0 0; }
 .chat_window .chat_header .info_header .close { -webkit-app-region: no-drag; float: right; padding: 3px 16px 0 0; }
 .chat_window .chat_header .info_header .minus { -webkit-app-region: no-drag; float: right; padding: 8px 8px 0 0; }
 .chat_window .chat_body { height: 200px; background-color: #FFF; overflow: auto; }
