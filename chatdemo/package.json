@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "devDependencies": {    
+    "electron-prebuilt": "latest"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "dependencies": {      
-        "socket.io": "latest"
+     "socket.io": "latest"
   },
   "keywords": [
     "electron"

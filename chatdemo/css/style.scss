@@ -21,6 +21,84 @@ body{
     outline: none;
 }
 
+.config_window{
+  height: 150px;
+  width: 400px;
+  margin: 0;
+  padding: 0;  
+  border-radius: $radius;
+  
+  .config_header{
+    -webkit-app-region: drag;
+    height: 30px;
+    background-color: $header_bg;
+    color:#FFF;
+    border-top-left-radius:$radius;
+    border-top-right-radius:$radius;
+    
+     .info_header{       
+      padding: 3px 0 0 15px;
+
+      .title{
+        font-size: 1.1em;
+        font-weight: 600;
+      }  
+      .close{
+        -webkit-app-region: no-drag;
+        float: right;
+        padding: 3px 16px 0 0;
+      }
+    }            
+  }
+  
+  .config_body{
+    height: 45px;
+    background-color: $chat_body;
+    overflow: auto;
+    border-bottom-left-radius:$radius;
+    border-bottom-right-radius:$radius;
+    
+
+    .form{
+        position: relative;
+        display: inline-block;
+        height: 100%;
+        width: 383px;
+        margin:auto 0;
+        float: right;
+
+
+        .input_config{
+          height: 93%;
+          width: 290px;
+          border: 0px solid;
+          color: $form_color;
+          font-size: 1.1em;
+        }
+        .vertical_line{
+          position: absolute;
+          right: 50px;
+          top: 8px;
+          width: 1px;
+          height: 22px;
+          background-color: $form_color;
+        }
+        .btn{
+          padding: 0;
+          float: right;
+          width: 49px;
+          height: 100%;
+          background-color: #FFF;
+          color: $form_color;
+          border: none;
+          border-radius: 5px;
+          font-size: 0.9em;
+        }
+      }
+    }  
+
+}
+
 .chat_window{
   height: 300px;
   width: 400px;  

@@ -10,7 +10,7 @@
    <div class="chat_window">
       <header class="chat_header">
         <div class="info_header">
-          <span class="name">John Doe</span>          
+          <span class="name" id="nameId"></span>          
           <i class="close fa fa-close fa-lg" id="close"></i>
           <i class="minus fa fa-minus fa-lg" id="min"></i>
           <i class="cog fa fa-cog fa-lg" id="cog"></i>
@@ -21,8 +21,7 @@
         </div>
       </main>
       <footer class="chat_footer">
-        <div class="send">
-          <i class="attach fa fa-paperclip fa-lg"></i>
+        <div class="send">          
           <div class="form">
             <input id="inputId" class="input_chat" type="text">
             <button id="btnId" class="btn">Send</button>
@@ -34,7 +33,6 @@
 </body>
  <script>
      require('./chat.js');     
-     require('./frameless.js');     
-     
+     require('./frameless.js');          
   </script>  
 </html>
