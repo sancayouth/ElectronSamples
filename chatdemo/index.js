@@ -1,26 +1,27 @@
 'use strict';
 const electron = require('electron');
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+const { app, BrowserWindow, ipcRenderer } = electron;
+
 const ipc = electron.ipcMain;
-const ipcRenderer = require('electron').ipcRenderer
+
+
 
 //windows
 var mainWindow = null;
 var settingsWindow = null;
 
-function createWindow () {
-  mainWindow = new BrowserWindow({
-      width: 400,
-      height: 300,
-      transparent: true,
-      resizable:false,
-      frame:false
-  });
-  mainWindow.loadURL(`file://${__dirname}/index.html`)
-  mainWindow.on('closed', function () {
-    mainWindow = null
-  });
+function createWindow() {
+    mainWindow = new BrowserWindow({
+        width: 400,
+        height: 300,
+        transparent: true,
+        resizable: false,
+        frame: false
+    });
+    mainWindow.loadURL(`file://${__dirname}/html/index.html`)
+    mainWindow.on('closed', function() {
+        mainWindow = null
+    });
 }
 
 app.on('ready', createWindow)
@@ -39,11 +40,11 @@ ipc.on('show-conf', () => {
         width: 420,
         height: 90,
         resizable: false,
-        frame:false
+        frame: false
     });
 
-    settingsWindow.loadURL('file://' + __dirname + '/config.html');
-    settingsWindow.on('closed',  () => {
+    settingsWindow.loadURL(`file://${__dirname}/html/config.html`);
+    settingsWindow.on('closed', () => {
         settingsWindow = null;
     });
 });
