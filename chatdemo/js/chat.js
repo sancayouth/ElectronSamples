@@ -4,21 +4,21 @@ const socket = io.connect('http://localhost:5000');
 
 let nickname = '';
 
-document.querySelector('.input_chat').addEventListener('keypress', function (e) {
-    var key = e.which || e.keyCode;
-    if ((key === 13) && (this.value!=='')) {
-       emit(this.value);
-       addMsg('me', this.value);
-       this.value = '';
+document.querySelector('.input_chat').addEventListener('keypress', function(e) {
+    let key = e.which || e.keyCode;
+    if ((key === 13) && (this.value !== '')) {
+        emit(this.value);
+        addMsg('me', this.value);
+        this.value = '';
     }
 });
 
-document.getElementById('btnId').onclick = function(){
-    var input = document.querySelector('.input_chat');
-    if (input.value!==''){
-      emit(input.value);
-      addMsg('me', input.value);
-      input.value = '';
+document.getElementById('btnId').onclick = function() {
+    let input = document.querySelector('.input_chat');
+    if (input.value !== '') {
+        emit(input.value);
+        addMsg('me', input.value);
+        input.value = '';
     }
 }
 
@@ -34,18 +34,18 @@ function addMsg(_class, _msg) {
 }
 
 
-function emit(msg){
-   socket.emit('new message', {
-     nickname:nickname,
-     message: msg
-     });
+function emit(msg) {
+    socket.emit('new message', {
+        nickname: nickname,
+        message: msg
+    });
 }
 
-socket.on('message created', function (data) {
-  if (data.nickname!==nickname){
-      document.querySelector('.name').innerHTML = data.nickname;
-      addMsg('you', data.message);
-  }
+socket.on('message created', function(data) {
+    if (data.nickname !== nickname) {
+        document.querySelector('.name').innerHTML = data.nickname;
+        addMsg('you', data.message);
+    }
 });
 
 

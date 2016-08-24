@@ -7,8 +7,8 @@ const ipc = electron.ipcMain;
 
 
 //windows
-var mainWindow = null;
-var settingsWindow = null;
+let mainWindow = null;
+let settingsWindow = null;
 
 function createWindow() {
     mainWindow = new BrowserWindow({
